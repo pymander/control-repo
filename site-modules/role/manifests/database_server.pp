@@ -4,4 +4,7 @@ class role::database_server {
   #All roles should include the base profile
   include profile::base
 
+  # Make sure we have our MySQL server thing here.
+  include profile::mysql
+
 }
