@@ -6,6 +6,8 @@ forge 'https://forge.puppet.com'
 mod 'puppetlabs-accounts', '4.2.0'
 mod 'puppetlabs-stdlib',  '6.0.0'
 mod 'puppetlabs-ntp', '8.0.0'
+mod 'puppetlabs-registry', '2.1.0'
+mod 'puppetlabs-mysql', '10.1.0'
 #mod 'puppetlabs/concat',  '6.0.0'
 
 # Modules from Git
