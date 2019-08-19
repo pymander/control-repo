@@ -2,6 +2,10 @@ class profile::base {
 
   #the base profile should include component modules that will be on all nodes
   include ntp
+
+  class { 'ntp':
+    servers => [ '0.pool.ntp.org', '1.pool.ntp.org', '2.pool.ntp.org', '3.pool.ntp.org'],
+  }
   
   accounts::user { 'monitoring':
     ensure => present,
