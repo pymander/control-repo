@@ -4,11 +4,11 @@ class profile::mysql {
     service_name => 'mariadb',
     override_options => {
       mysqld => {
-        'log-error' => '/var/log/mysql/mariadb.log',
-        'pid-file'  => '/var/run/mysqld/mysqld.pid',
+        'log-error' => '/var/log/mariadb/mariadb.log',
+        'pid-file'  => '/var/run/mariadb/mysqld.pid',
       },
       mysqld_safe => {
-        'log-error' => '/var/log/mysql/mariadb.log',
+        'log-error' => '/var/log/mariadb/mariadb.log',
       },
     }
   }
