@@ -12,4 +12,33 @@ class profile::mysql {
       },
     }
   }
+
+  # Purge all unmanaged databases
+  resources { 'mysql_database':
+    purge => true,
+  }
+
+  # Default MySQL tables that need to exist
+  mysql_database { 'information_schema':
+    ensure => 'present',
+    charset => 'utf8',
+    collate => 'utf8_general_ci',
+  }
+  mysqldatabase { 'mysql':
+    ensure => 'present',
+    charset => 'latin1',
+    collate => 'latin1_swedish_ci',
+  }
+  mysql_database { 'performance_schema':
+    ensure => 'present',
+    charset -> 'utf8',
+    collate => 'utf8_general_ci',
+  }
+
+  # Our custom database table 
+  mysql::db { 'webportal_customer':
+    ensure => present,
+    user => 'webportal',
+    password => 'hunter2',
+  }
 }
