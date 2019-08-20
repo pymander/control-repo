@@ -31,7 +31,7 @@ class profile::mysql {
   }
   mysql_database { 'performance_schema':
     ensure => 'present',
-    charset -> 'utf8',
+    charset => 'utf8',
     collate => 'utf8_general_ci',
   }
 
