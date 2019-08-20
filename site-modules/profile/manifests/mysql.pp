@@ -41,4 +41,13 @@ class profile::mysql {
     user => 'webportal',
     password => 'hunter2',
   }
+
+  # Cron maintenance for the database.
+  cron { 'vacuum_customer_database':
+    ensure => 'present',
+    command => 'mysqlcheck --databases webportal_customer',
+    hour => ['0'],
+    target => 'root',
+    user => 'root',
+  }
 }

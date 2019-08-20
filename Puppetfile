@@ -8,6 +8,7 @@ mod 'puppetlabs-stdlib',  '6.0.0'
 mod 'puppetlabs-ntp', '8.0.0'
 mod 'puppetlabs-registry', '2.1.0'
 mod 'puppetlabs-mysql', '10.1.0'
+mod 'puppet-cron', '1.3.1'
 #mod 'puppetlabs/concat',  '6.0.0'
 
 # Modules from Git
